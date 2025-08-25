@@ -29,8 +29,16 @@ jobs:
       - name: Install
         run: npm ci || npm install
 
+      # Force Vite to output to ./dist even if vite.config sets a different outDir
       - name: Build
-        run: npm run build
+        run: npm run build -- --outDir dist --emptyOutDir
+
+      - name: Debug build output
+        run: |
+          echo "Root contents:"
+          ls -la
+          echo "dist contents (if any):"
+          if [ -d dist ]; then ls -la dist; else echo "dist/ not found"; fi
 
       - name: Create 404 fallback for SPA
         run: |
@@ -53,5 +61,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 
