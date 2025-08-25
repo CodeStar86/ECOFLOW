@@ -33,7 +33,10 @@ jobs:
         run: npm run build
 
       - name: Create 404 fallback for SPA
-        run: cp dist/index.html dist/404.html
+        run: |
+          if [ -f dist/index.html ]; then
+            cp dist/index.html dist/404.html
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -50,4 +53,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
