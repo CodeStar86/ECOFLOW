@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* EcoFlow Design Tokens */
+  --ec-brand: #2FA36B;
+  --ec-brand-600: #258A59;
+  --ec-secondary: #0B5F4A;
+  
+  --ec-accent-sky: #36A7E3;
+  --ec-accent-sun: #F2B705;
+  --ec-accent-earth: #8B6A4B;
+  
+  --ec-n-0: #FFFFFF;
+  --ec-n-50: #F7FAF8;
+  --ec-n-100: #EDF4F0;
+  --ec-n-200: #D8E6DE;
+  --ec-n-300: #B9CDC1;
+  --ec-n-600: #2B3A34;
+  --ec-n-900: #0E1513;
+  
+  --ec-success: #2FA36B;
+  --ec-warning: #F2B705;
+  --ec-error: #D9544D;
+  --ec-info: #36A7E3;
+  
+  --ec-f-sans: "Inter", ui-sans-serif, system-ui;
+  --ec-f-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  
+  --ec-r-sm: 6px;
+  --ec-r-md: 10px;
+  --ec-r-lg: 16px;
+  --ec-r-pill: 999px;
+  
+  --ec-sh-sm: 0 1px 2px rgba(0,0,0,.06);
+  --ec-sh-md: 0 6px 24px rgba(0,0,0,.08);
+  --ec-sh-lg: 0 12px 40px rgba(0,0,0,.12);
+  
+  --ec-sp-1: 4px;
+  --ec-sp-2: 8px;
+  --ec-sp-3: 12px;
+  --ec-sp-4: 16px;
+  --ec-sp-5: 20px;
+  --ec-sp-6: 24px;
+  --ec-sp-8: 32px;
+  --ec-sp-10: 40px;
+  --ec-sp-12: 48px;
+  --ec-sp-16: 64px;
+  
+  --ec-motion-fast: 120ms;
+  --ec-motion: 200ms;
+  --ec-motion-slow: 320ms;
+  --ec-ease: cubic-bezier(.2,.8,.2,1);
+
+  /* Typography scale */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  /* Map to Tailwind variables */
+  --font-size: 16px;
+  --background: var(--ec-n-0);
+  --foreground: var(--ec-n-900);
+  --card: var(--ec-n-0);
+  --card-foreground: var(--ec-n-900);
+  --popover: var(--ec-n-0);
+  --popover-foreground: var(--ec-n-900);
+  --primary: var(--ec-brand);
+  --primary-foreground: var(--ec-n-0);
+  --secondary: var(--ec-n-100);
+  --secondary-foreground: var(--ec-n-900);
+  --muted: var(--ec-n-100);
+  --muted-foreground: var(--ec-n-600);
+  --accent: var(--ec-accent-sky);
+  --accent-foreground: var(--ec-n-0);
+  --destructive: var(--ec-error);
+  --destructive-foreground: var(--ec-n-0);
+  --border: var(--ec-n-200);
+  --input: transparent;
+  --input-background: var(--ec-n-50);
+  --switch-background: var(--ec-n-300);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--ec-brand);
+  --chart-1: var(--ec-accent-sun);
+  --chart-2: var(--ec-accent-sky);
+  --chart-3: var(--ec-accent-earth);
+  --chart-4: var(--ec-brand);
+  --chart-5: var(--ec-secondary);
+  --radius: var(--ec-r-md);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ec-n-0: #0E1513;
+    --ec-n-50: #0E1513;
+    --ec-n-100: #131C19;
+    --ec-n-200: #182420;
+    --ec-n-300: #203029;
+    --ec-n-600: #D8E6DE;
+    --ec-n-900: #F7FAF8;
+    
+    --background: var(--ec-n-0);
+    --foreground: var(--ec-n-900);
+    --card: var(--ec-n-50);
+    --card-foreground: var(--ec-n-900);
+    --popover: var(--ec-n-50);
+    --popover-foreground: var(--ec-n-900);
+    --primary: var(--ec-brand);
+    --primary-foreground: var(--ec-n-0);
+    --secondary: var(--ec-n-200);
+    --secondary-foreground: var(--ec-n-900);
+    --muted: var(--ec-n-200);
+    --muted-foreground: var(--ec-n-600);
+    --border: var(--ec-n-200);
+    --input: var(--ec-n-200);
+    --input-background: var(--ec-n-100);
+  }
+}
+
+.dark {
+  --background: var(--ec-n-0);
+  --foreground: var(--ec-n-900);
+  --card: var(--ec-n-50);
+  --card-foreground: var(--ec-n-900);
+  --popover: var(--ec-n-50);
+  --popover-foreground: var(--ec-n-900);
+  --primary: var(--ec-brand);
+  --primary-foreground: var(--ec-n-0);
+  --secondary: var(--ec-n-200);
+  --secondary-foreground: var(--ec-n-900);
+  --muted: var(--ec-n-200);
+  --muted-foreground: var(--ec-n-600);
+  --accent: var(--ec-accent-sky);
+  --accent-foreground: var(--ec-n-0);
+  --destructive: var(--ec-error);
+  --destructive-foreground: var(--ec-n-0);
+  --border: var(--ec-n-200);
+  --input: var(--ec-n-200);
+  --input-background: var(--ec-n-100);
+  --ring: var(--ec-brand);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* EcoFlow specific colors */
+  --color-brand: var(--ec-brand);
+  --color-brand-600: var(--ec-brand-600);
+  --color-secondary-eco: var(--ec-secondary);
+  --color-accent-sky: var(--ec-accent-sky);
+  --color-accent-sun: var(--ec-accent-sun);
+  --color-accent-earth: var(--ec-accent-earth);
+  --color-success: var(--ec-success);
+  --color-warning: var(--ec-warning);
+  --color-error: var(--ec-error);
+  --color-info: var(--ec-info);
+  --color-neutral-0: var(--ec-n-0);
+  --color-neutral-50: var(--ec-n-50);
+  --color-neutral-100: var(--ec-n-100);
+  --color-neutral-200: var(--ec-n-200);
+  --color-neutral-300: var(--ec-n-300);
+  --color-neutral-600: var(--ec-n-600);
+  --color-neutral-900: var(--ec-n-900);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--ec-f-sans);
+  }
+}
+
+/**
+ * Base typography following EcoFlow guidelines
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: var(--ec-f-display);
+      font-size: var(--text-5xl);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ec-secondary);
+    }
+
+    h2 {
+      font-family: var(--ec-f-display);
+      font-size: var(--text-4xl);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ec-secondary);
+    }
+
+    h3 {
+      font-family: var(--ec-f-display);
+      font-size: var(--text-3xl);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ec-secondary);
+    }
+
+    h4 {
+      font-family: var(--ec-f-display);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--ec-secondary);
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.6;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom utility classes for EcoFlow */
+@layer utilities {
+  .transition-brand {
+    transition-duration: var(--ec-motion);
+    transition-timing-function: var(--ec-ease);
+  }
+  
+  .shadow-eco-sm {
+    box-shadow: var(--ec-sh-sm);
+  }
+  
+  .shadow-eco-md {
+    box-shadow: var(--ec-sh-md);
+  }
+  
+  .shadow-eco-lg {
+    box-shadow: var(--ec-sh-lg);
+  }
+}
